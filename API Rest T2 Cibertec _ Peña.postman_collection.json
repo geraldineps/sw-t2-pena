@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "ad8b127e-dbe5-4369-aa2c-6f25a5a7b139",
+		"name": "API Rest T2 Cibertec _ Peña",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34571607"
+	},
+	"item": [
+		{
+			"name": "Buscar Producto Por Categoría",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url-base}}/api/v1/producto/buscarPorCategoria?categoria=1",
+					"host": [
+						"{{url-base}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"producto",
+						"buscarPorCategoria"
+					],
+					"query": [
+						{
+							"key": "categoria",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Producto Entre 2 Valores de Stock",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url-base}}/api/v1/producto/buscarPorStock?stockinicial=30&stockfinal=90",
+					"host": [
+						"{{url-base}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"producto",
+						"buscarPorStock"
+					],
+					"query": [
+						{
+							"key": "stockinicial",
+							"value": "30"
+						},
+						{
+							"key": "stockfinal",
+							"value": "90"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Producto Por Marca y Categoria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url-base}}/api/v1/producto/buscarPorMarcaYCategoria?marca=Whiskas&categoria=2",
+					"host": [
+						"{{url-base}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"producto",
+						"buscarPorMarcaYCategoria"
+					],
+					"query": [
+						{
+							"key": "marca",
+							"value": "Whiskas"
+						},
+						{
+							"key": "categoria",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Producto Por Precio Mayor al Valor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url-base}}/api/v1/producto/buscarPorPrecio?precio=20",
+					"host": [
+						"{{url-base}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"producto",
+						"buscarPorPrecio"
+					],
+					"query": [
+						{
+							"key": "precio",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Nuevo Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"nombreproducto\": \"Comida Húmeda para Gatos\",\r\n     \"idcategoria\": 2,\r\n     \"marca\": \"RicoCat\",\r\n     \"precio\": 4.00,\r\n     \"stock\": 25\r\n}\r\n\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url-base}}/api/v1/producto",
+					"host": [
+						"{{url-base}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Stock",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idproducto\": 1,\r\n    \"stock\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url-base}}/api/v1/producto",
+					"host": [
+						"{{url-base}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Cliente Por Nombre y Apellido",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url-base}}/api/v1/cliente/buscarPorNombreYApellido?nombrecli=Jose&apellidoscli=Moreno",
+					"host": [
+						"{{url-base}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"cliente",
+						"buscarPorNombreYApellido"
+					],
+					"query": [
+						{
+							"key": "nombrecli",
+							"value": "Jose"
+						},
+						{
+							"key": "apellidoscli",
+							"value": "Moreno"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Clientes Por Correo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url-base}}/api/v1/cliente/buscarPorCorreo?correo=@hotmail.com",
+					"host": [
+						"{{url-base}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"cliente",
+						"buscarPorCorreo"
+					],
+					"query": [
+						{
+							"key": "correo",
+							"value": "@hotmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Nuevo Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nombrecli\": \"Jereck\",\r\n   \"apellidoscli\": \"Peña\",\r\n   \"correo\": \"jereck@hotmail.com\",\r\n   \"direccion\": \"Av. Bertello 123\",\r\n   \"telefono\": \"998 552 369\",\r\n   \"dni\": \"72489658\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url-base}}/api/v1/cliente",
+					"host": [
+						"{{url-base}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Empleado Por Nombre O Apellido",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url-base}}/api/v1/empleado/buscarPorNombreOApellido?nombreemp=Ana&apellidosemp=Sánchez",
+					"host": [
+						"{{url-base}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"empleado",
+						"buscarPorNombreOApellido"
+					],
+					"query": [
+						{
+							"key": "nombreemp",
+							"value": "Ana"
+						},
+						{
+							"key": "apellidosemp",
+							"value": "Sánchez"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Empleado Por DNI Diferente Al Valor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url-base}}/api/v1/empleado/buscarPorDNI?dniemp=56789",
+					"host": [
+						"{{url-base}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"empleado",
+						"buscarPorDNI"
+					],
+					"query": [
+						{
+							"key": "dniemp",
+							"value": "56789"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
